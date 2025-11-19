@@ -1,6 +1,6 @@
 #ddev-generated
 
-RUN npm install --global pnpm && \
+RUN (command -v pnpm >/dev/null 2>&1 || npm install --global pnpm) && \
     PNPM_SCRIPT=$(printf '%s\n' \
         'export PNPM_HOME="$HOME/.local/share/pnpm"' \
         'case ":$PATH:" in' \
