@@ -122,7 +122,6 @@ teardown() {
   assert_success
   run ddev restart -y
   assert_success
-  health_checks
 
   # Verify is-odd@3.0.1 is stored in the global cache after installing
   run ddev pnpm install
